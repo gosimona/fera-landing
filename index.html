@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="him">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>FERA | Feromonas Concentradas — Atracción Pura</title>
+<meta name="description" content="FERA: fragancia de feromonas concentradas en base de aceite. Domina tu atracción. Pago contra entrega. Compra 1, llévate 1 GRATIS." />
+
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['Montserrat', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        colors: {
+          fera: {
+            black: '#0A0A0A',
+            charcoal: '#141414',
+            gold: '#D4AF37',
+            rose: '#E63946',
+          }
+        },
+      }
+    }
+  }
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- Favicon (inline SVG, no external asset needed) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23D4AF37' font-family='Georgia'%3EF%3C/text%3E%3C/svg%3E">
+</head>
+<body class="bg-fera-black text-white font-body antialiased overflow-x-hidden selection:bg-[var(--accent)] selection:text-black">
+
+<!-- ================= HEADER ================= -->
+<header id="site-header" class="fixed top-0 left-0 w-full z-50 site-header">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center px-5 md:px-10 py-4">
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-white/70">
+      <a href="#beneficios" class="hover:text-white transition">Ciencia</a>
+      <a href="#producto" class="hover:text-white transition">Producto</a>
+      <a href="#testimonios" class="hover:text-white transition">Testimonios</a>
+    </nav>
+    <a href="#hero" class="text-2xl md:text-3xl font-display font-black tracking-[0.3em] accent-text text-center">FERA</a>
+    <div class="flex justify-end">
+      <a href="#oferta" class="btn-glow accent-bg text-black text-xs md:text-sm font-display font-bold px-4 md:px-6 py-2.5 rounded-full tracking-wide whitespace-nowrap">
+        QUIERO EL MÍO
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-28 pb-16 px-5 overflow-hidden hero-texture">
+  <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto text-center reveal">
+    <span class="inline-block text-[11px] md:text-xs tracking-[0.4em] uppercase text-white/50 mb-6 font-medium">Feromonas Concentradas · Base en Aceite</span>
+
+    <h1 id="hero-title" class="font-display font-black text-4xl sm:text-5xl md:text-7xl leading-[1.05] tracking-tight mb-6 transition-opacity duration-300">
+      Despierta su instinto animal.<br class="hidden md:block" />
+      <span class="accent-text">Domina su atención</span> sin decir una sola palabra.
+    </h1>
+
+    <p id="hero-subtitle" class="max-w-2xl mx-auto text-white/60 text-base md:text-lg leading-relaxed mb-10 transition-opacity duration-300">
+      Copulinas y feromonas puras suspendidas en un concentrado de aceite de alta fijación. Una señal directa al cerebro reptiliano: la parte que decide, en segundos, si sientes deseo o indiferencia.
+    </p>
+
+    <!-- Selector HIM / HER — divisor de entrada imponente -->
+    <p class="text-white/40 text-xs tracking-[0.3em] uppercase mb-4">Elige tu camino</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto mb-10">
+      <button data-theme-btn="her" class="gender-select-card gender-select-her" aria-pressed="false">
+        <span class="gender-select-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 6 5 10 5 14a7 7 0 0014 0c0-4-3-8-7-12z"/></svg>
+        </span>
+        <span class="gender-select-label">FERA FOR HER</span>
+        <span class="gender-select-sub">Atracción pura</span>
+        <span class="gender-select-arrow">Elegir →</span>
+      </button>
+      <button data-theme-btn="him" class="gender-select-card gender-select-him" aria-pressed="true">
+        <span class="gender-select-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"/></svg>
+        </span>
+        <span class="gender-select-label">FERA FOR HIM</span>
+        <span class="gender-select-sub">Instinto. Poder. Dominio.</span>
+        <span class="gender-select-arrow">Elegir →</span>
+      </button>
+    </div>
+
+    <a href="#oferta" class="cta-pulse inline-flex flex-col items-center justify-center accent-bg text-black font-display font-black text-sm md:text-base px-8 md:px-12 py-4 md:py-5 rounded-full shadow-2xl tracking-wide">
+      <span>¡QUIERO MI FRASCO GRATIS!</span>
+      <span class="text-[10px] font-semibold tracking-[0.2em] opacity-70 mt-0.5">PAGO CONTRA ENTREGA</span>
+    </a>
+
+    <div class="mt-8 flex items-center justify-center gap-6 text-white/40 text-xs tracking-wide">
+      <span class="flex items-center gap-1.5">★★★★★ <span class="text-white/60">+4,800 reseñas</span></span>
+      <span class="hidden sm:inline">·</span>
+      <span class="hidden sm:inline">Envío gratis en combos</span>
+    </div>
+  </div>
+
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-white/30 z-10">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+</section>
+
+<!-- ================= BENEFICIOS / BIOQUÍMICA ================= -->
+<section id="beneficios" class="relative py-24 md:py-32 px-5 bg-fera-charcoal">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">La ciencia detrás de FERA</span>
+      <h2 class="font-display font-black text-3xl md:text-5xl mt-4 leading-tight">No es magia. Es bioquímica.</h2>
+      <p class="text-white/50 max-w-xl mx-auto mt-4">Tres compuestos activos trabajando en conjunto para generar una respuesta de atracción medible y real.</p>
+    </div>
+
+    <div id="benefits-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    <p class="text-center text-white/25 text-[11px] mt-8 max-w-lg mx-auto">*Los resultados individuales pueden variar. FERA es una fragancia de uso cosmético; no sustituye tratamiento médico ni psicológico.</p>
+  </div>
+</section>
+
+<!-- ================= PRODUCTO / MOCKUPS ================= -->
+<section id="producto" class="relative py-24 md:py-32 px-5">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">Diseño del producto</span>
+      <h2 class="font-display font-black text-3xl md:text-5xl mt-4">Dos esencias. Un solo objetivo.</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 items-center">
+      <!-- HIM BOTTLE -->
+      <div class="flex flex-col items-center reveal">
+        <div class="bottle-mockup bottle-him" data-tilt>
+          <div class="bottle-cap"></div>
+          <div class="bottle-neck"></div>
+          <div class="bottle-body">
+            <div class="bottle-shine"></div>
+            <div class="bottle-label">
+              <span class="bottle-brand">FERA</span>
+              <span class="bottle-line"></span>
+              <span class="bottle-sub">FOR HIM</span>
+              <span class="bottle-slogan">INSTINTO. PODER. DOMINIO.</span>
+            </div>
+          </div>
+          <div class="bottle-base"></div>
+        </div>
+        <h3 class="font-display font-bold text-xl mt-8">FERA FOR HIM</h3>
+        <p class="text-white/50 text-sm mt-2 text-center max-w-xs">Negro mate y dorado. Para el hombre que no necesita levantar la voz para ser notado.</p>
+      </div>
+
+      <!-- HER BOTTLE -->
+      <div class="flex flex-col items-center reveal" style="transition-delay:.1s">
+        <div class="bottle-mockup bottle-her" data-tilt>
+          <div class="bottle-cap"></div>
+          <div class="bottle-neck"></div>
+          <div class="bottle-body">
+            <div class="bottle-shine"></div>
+            <div class="bottle-label">
+              <span class="bottle-brand">FERA</span>
+              <span class="bottle-line"></span>
+              <span class="bottle-sub">FOR HER</span>
+              <span class="bottle-slogan">ATRACCIÓN PURA</span>
+            </div>
+          </div>
+          <div class="bottle-base"></div>
+        </div>
+        <h3 class="font-display font-bold text-xl mt-8">FERA FOR HER</h3>
+        <p class="text-white/50 text-sm mt-2 text-center max-w-xs">Negro mate y rojo pasión. Magnetismo puro en 15ml de concentrado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFERTA BOGO ================= -->
+<section id="oferta" class="relative py-24 md:py-32 px-5 bg-fera-charcoal overflow-hidden">
+  <div class="absolute inset-0 hero-glow opacity-40 pointer-events-none"></div>
+
+  <div class="relative max-w-6xl mx-auto">
+    <div class="text-center mb-10 reveal">
+      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">Oferta por tiempo limitado</span>
+      <h2 class="font-display font-black text-3xl md:text-5xl mt-4">Compra uno. Llévate el segundo GRATIS.</h2>
+      <p class="text-white/50 max-w-xl mx-auto mt-4">Pago 100% contra entrega. No arriesgas nada, no pagas nada hasta tenerlo en tus manos.</p>
+    </div>
+
+    <!-- Countdown -->
+    <div class="reveal flex flex-col items-center mb-14">
+      <span class="text-[11px] tracking-[0.3em] uppercase text-white/40 mb-3">Esta oferta se reinicia en</span>
+      <div id="countdown" class="flex gap-3 md:gap-5">
+        <div class="countdown-box"><span id="cd-hours">00</span><small>Horas</small></div>
+        <div class="countdown-box"><span id="cd-minutes">00</span><small>Min</small></div>
+        <div class="countdown-box"><span id="cd-seconds">00</span><small>Seg</small></div>
+      </div>
+    </div>
+
+    <!-- Package cards (contenido dinámico según género seleccionado) -->
+    <div id="packages-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch"></div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS / WHATSAPP ================= -->
+<section id="testimonios" class="relative py-24 md:py-32 px-5">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">Historias reales</span>
+      <h2 class="font-display font-black text-3xl md:text-5xl mt-4">Lo que dicen cuando ya no pueden más</h2>
+    </div>
+
+    <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ================= GARANTÍA + FAQ ================= -->
+<section id="garantia" class="relative py-20 px-5 bg-fera-charcoal">
+  <div class="max-w-4xl mx-auto reveal">
+    <div class="guarantee-seal">
+      <div class="guarantee-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l7 3v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V5l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div>
+        <h3 class="font-display font-black text-xl md:text-2xl accent-text mb-1">O te devora a besos, o te devolvemos el dinero</h3>
+        <p class="text-white/50 text-sm md:text-base">Garantía total de 30 días. Si no ves resultados, te devolvemos el 100% de tu dinero. Sin preguntas, sin letra pequeña.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="relative py-24 md:py-32 px-5">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-14 reveal">
+      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">Dudas</span>
+      <h2 class="font-display font-black text-3xl md:text-5xl mt-4">Preguntas frecuentes</h2>
+    </div>
+
+    <div class="space-y-3">
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>¿FERA tiene olor propio o huele a perfume?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>FERA tiene un aroma neutro y sutil de fondo, diseñado para combinarse (layering) con tu perfume habitual sin alterarlo. No reemplaza tu fragancia: potencia su efecto.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>¿Cómo funciona el pago contra entrega?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Llenas el formulario con tus datos de envío, nuestro equipo confirma tu pedido por WhatsApp o llamada, y pagas en efectivo cuando el mensajero te entrega el paquete en tu puerta.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>¿Cuánto dura el efecto de una aplicación?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Gracias a su base en aceite concentrado, la fijación en piel dura más de 24 horas, muy por encima de un perfume tradicional en base alcohol.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>¿En cuánto tiempo llega mi pedido?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Entre 24 y 72 horas hábiles según tu ciudad. Los combos de 2 y 4 frascos incluyen envío gratuito y prioridad de despacho.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question">
+          <span>¿Qué pasa si no funciona para mí?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Tienes 30 días de garantía total desde la entrega. Si no notas diferencia, te devolvemos el 100% de tu dinero.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="relative border-t border-white/5 py-12 px-5 bg-fera-black">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <span class="text-xl font-display font-black tracking-[0.3em] accent-text">FERA</span>
+    <p class="text-white/30 text-xs text-center md:text-right max-w-md">
+      FERA es una fragancia cosmética de uso externo. No es un producto medicinal ni garantiza resultados idénticos en todas las personas. Uso exclusivo para mayores de 18 años. © <span id="year"></span> FERA. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<!-- ================= MODAL: FORMULARIO DE PEDIDO ================= -->
+<div id="order-modal" class="order-modal" aria-hidden="true">
+  <div class="order-modal-overlay" data-close-modal></div>
+  <div class="order-modal-panel">
+    <button class="order-modal-close" data-close-modal aria-label="Cerrar">✕</button>
+
+    <div id="order-form-view">
+      <span class="text-[11px] tracking-[0.3em] uppercase accent-text font-semibold">Pago contra entrega</span>
+      <h3 id="modal-pkg-title" class="font-display font-black text-2xl mt-2 mb-1">Combo 2 Frascos</h3>
+      <p id="modal-pkg-desc" class="text-white/50 text-sm mb-6">2 Frascos FERA · Envío gratis</p>
+
+      <div class="order-total-box">
+        <span class="text-white/50 text-sm">Total a pagar al recibir</span>
+        <span id="modal-total" class="text-3xl font-display font-black accent-text">$149.900</span>
+      </div>
+
+      <form id="order-form" class="mt-6 space-y-4">
+        <div>
+          <label class="order-label">Nombre completo</label>
+          <input required type="text" name="nombre" class="order-input" placeholder="Ej: María Torres" />
+        </div>
+        <div>
+          <label class="order-label">Teléfono / WhatsApp</label>
+          <input required type="tel" name="telefono" class="order-input" placeholder="Ej: 300 123 4567" />
+        </div>
+        <div>
+          <label class="order-label">Ciudad</label>
+          <input required type="text" name="ciudad" class="order-input" placeholder="Ej: Bogotá" />
+        </div>
+        <div>
+          <label class="order-label">Dirección de entrega</label>
+          <input required type="text" name="direccion" class="order-input" placeholder="Calle, número, barrio" />
+        </div>
+        <input type="hidden" name="paquete" id="modal-pkg-field" />
+        <button type="submit" class="btn-glow accent-bg text-black font-display font-black text-sm w-full py-4 rounded-full tracking-wide mt-2">
+          CONFIRMAR PEDIDO — PAGO CONTRA ENTREGA
+        </button>
+        <p class="text-white/30 text-[11px] text-center">No se realiza ningún cobro ahora. Pagas en efectivo cuando recibes tu pedido.</p>
+      </form>
+    </div>
+
+    <div id="order-success-view" class="hidden text-center py-8">
+      <div class="mx-auto mb-4 w-16 h-16 rounded-full accent-bg flex items-center justify-center">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3 class="font-display font-black text-2xl mb-2">¡Pedido confirmado!</h3>
+      <p class="text-white/50 text-sm max-w-xs mx-auto">Un asesor de FERA te escribirá por WhatsApp en los próximos minutos para confirmar la entrega. Ten tu efectivo listo 😉</p>
+      <button data-close-modal class="mt-6 text-sm accent-text font-semibold tracking-wide">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= TOAST DE NOTIFICACIONES SOCIALES ================= -->
+<div id="toast-container" class="toast-container"></div>
+
+<!-- ================= CTA FLOTANTE MÓVIL ================= -->
+<a href="#oferta" class="mobile-floating-cta md:hidden">
+  <span>¡QUIERO MI FRASCO GRATIS!</span>
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>
