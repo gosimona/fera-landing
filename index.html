@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="him">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 <title>FERA | Feromonas Concentradas — Atracción Pura</title>
-<meta name="description" content="FERA: fragancia de feromonas concentradas en base de aceite. Domina tu atracción. Pago contra entrega. Compra 1, llévate 1 GRATIS." />
+<meta name="description" content="FERA: fragancia de feromonas concentradas en base de aceite. Domina tu atracción. Pago contra entrega." />
 
 <!-- Tailwind CSS via CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -13,8 +13,8 @@
     theme: {
       extend: {
         fontFamily: {
-          display: ['Montserrat', 'sans-serif'],
-          body: ['Inter', 'sans-serif'],
+          display: ['Prata', 'serif'],
+          body: ['Jost', 'sans-serif'],
         },
         colors: {
           fera: {
@@ -22,6 +22,7 @@
             charcoal: '#141414',
             gold: '#D4AF37',
             rose: '#E63946',
+            navy: '#172B84',
           }
         },
       }
@@ -32,7 +33,7 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 
@@ -41,261 +42,402 @@
 </head>
 <body class="bg-fera-black text-white font-body antialiased overflow-x-hidden selection:bg-[var(--accent)] selection:text-black">
 
-<!-- ================= HEADER ================= -->
-<header id="site-header" class="fixed top-0 left-0 w-full z-50 site-header">
-  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center px-5 md:px-10 py-4">
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-white/70">
-      <a href="#beneficios" class="hover:text-white transition">Ciencia</a>
-      <a href="#producto" class="hover:text-white transition">Producto</a>
-      <a href="#testimonios" class="hover:text-white transition">Testimonios</a>
-    </nav>
-    <a href="#hero" class="text-2xl md:text-3xl font-display font-black tracking-[0.3em] accent-text text-center">FERA</a>
+<!-- ================= TOPBAR UTILITARIO (no fijo, se desplaza con la página) ================= -->
+<div class="topbar-utility">
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg> Envío gratis a todo el país</span>
+  <span class="topbar-sep"></span>
+  <span>★★★★★ <span class="text-white/60">Más de 4,800 clientes</span></span>
+  <span class="topbar-sep"></span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l7 3v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V5l7-3z"/><path d="M9 12l2 2 4-4"/></svg> Garantía de devolución 30 días</span>
+</div>
+
+<!-- ================= HEADER (sticky) ================= -->
+<header id="site-header" class="site-header">
+  <nav class="subnav">
+    <a href="#inicio">Inicio</a>
+    <a href="#resenas">Reseñas</a>
+    <a href="#producto">Producto</a>
+    <a href="#faq">Preguntas</a>
+  </nav>
+  <div class="max-w-7xl mx-auto grid grid-cols-3 items-center px-5 md:px-10 py-3">
+    <div class="flex items-center gap-4 text-white/70">
+      <button class="header-icon-btn" aria-label="Menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <button class="header-icon-btn hidden sm:inline-flex" aria-label="Buscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+    </div>
+    <a href="#inicio" class="text-2xl md:text-3xl font-display tracking-[0.3em] accent-text text-center">FERA</a>
     <div class="flex justify-end">
-      <a href="#oferta" class="btn-glow accent-bg text-black text-xs md:text-sm font-display font-bold px-4 md:px-6 py-2.5 rounded-full tracking-wide whitespace-nowrap">
-        QUIERO EL MÍO
-      </a>
+      <a href="#oferta" class="header-icon-btn" aria-label="Ver oferta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L4 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg></a>
     </div>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-28 pb-16 px-5 overflow-hidden hero-texture">
-  <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+<!-- ================= TICKER 1 (se desplaza con la página) ================= -->
+<div class="ticker ticker-light">
+  <div class="ticker-track">
+    <span>Hecho Para Cautivar</span><span>·</span><span>Huele a Confianza</span><span>·</span><span>Respaldado por la Ciencia</span><span>·</span>
+    <span>Hecho Para Cautivar</span><span>·</span><span>Huele a Confianza</span><span>·</span><span>Respaldado por la Ciencia</span><span>·</span>
+    <span>Hecho Para Cautivar</span><span>·</span><span>Huele a Confianza</span><span>·</span><span>Respaldado por la Ciencia</span><span>·</span>
+  </div>
+</div>
 
-  <div class="relative z-10 max-w-5xl mx-auto text-center reveal">
-    <span class="inline-block text-[11px] md:text-xs tracking-[0.4em] uppercase text-white/50 mb-6 font-medium">Feromonas Concentradas · Base en Aceite</span>
+<!-- ================= PDP HERO: GALERÍA + BUYBOX ================= -->
+<section id="inicio" class="relative px-5 py-10 md:py-14">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-14 items-start">
 
-    <h1 id="hero-title" class="font-display font-black text-4xl sm:text-5xl md:text-7xl leading-[1.05] tracking-tight mb-6 transition-opacity duration-300">
-      Despierta su instinto animal.<br class="hidden md:block" />
-      <span class="accent-text">Domina su atención</span> sin decir una sola palabra.
-    </h1>
+    <!-- GALERÍA -->
+    <div class="reveal">
+      <div class="pdp-gallery-main ph ph-onlight ph-square" id="pdp-main-image">
+        <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span class="ph-label" id="pdp-main-image-label">Reemplazar: foto de producto</span>
+        <span class="ph-sub">1200×1200 · fondo tela oscura + frasco en mano</span>
+        <span class="pdp-seal">30 DÍAS<br>GARANTÍA 100%</span>
+        <span class="pdp-pill">★ Mejor Aroma con Feromonas 2026</span>
+      </div>
+      <div class="pdp-thumbs" id="pdp-thumbs">
+        <button class="pdp-thumb active" data-label="foto de producto principal" aria-label="Imagen 1"></button>
+        <button class="pdp-thumb" data-label="gráfico USP: Aumenta Confianza / Atrae sin esfuerzo" aria-label="Imagen 2"></button>
+        <button class="pdp-thumb" data-label="frasco sobre tela + sello '2026 Mejor Aroma'" aria-label="Imagen 3"></button>
+        <button class="pdp-thumb" data-label="testimonio destacado en captura" aria-label="Imagen 4"></button>
+        <button class="pdp-thumb" data-label="cómo usarlo: 2 gotas en puntos de pulso" aria-label="Imagen 5"></button>
+        <button class="pdp-thumb" data-label="comparativa FERA vs. perfume tradicional" aria-label="Imagen 6"></button>
+      </div>
+    </div>
 
-    <p id="hero-subtitle" class="max-w-2xl mx-auto text-white/60 text-base md:text-lg leading-relaxed mb-10 transition-opacity duration-300">
-      Copulinas y feromonas puras suspendidas en un concentrado de aceite de alta fijación. Una señal directa al cerebro reptiliano: la parte que decide, en segundos, si sientes deseo o indiferencia.
+    <!-- BUYBOX -->
+    <div class="reveal" style="transition-delay:.08s">
+      <div class="flex items-center gap-2 text-sm mb-3">
+        <span class="text-[13px] tracking-wide">★★★★★</span>
+        <span class="text-white/60">4.9/5 Excelente (1,184)</span>
+      </div>
+      <span class="text-xs tracking-[0.2em] uppercase text-white/40">FERA For Him</span>
+      <h1 class="font-display text-3xl md:text-4xl leading-tight mt-2 mb-4">El aroma irresistible que te amplifica, y la atrae</h1>
+
+      <div class="flex items-baseline gap-3 mb-5">
+        <span class="text-white/30 text-lg line-through">$229.900</span>
+        <span class="font-display text-3xl accent-text">$149.900</span>
+        <span class="free-ship-tag">+Envío Gratis</span>
+      </div>
+
+      <ul class="space-y-3 mb-6">
+        <li class="flex gap-3"><span class="feature-check">✓</span><span class="text-white/70 text-sm">Encarna la masculinidad real</span></li>
+        <li class="flex gap-3"><span class="feature-check">✓</span><span class="text-white/70 text-sm">Se mezcla a la perfección con tu aroma natural</span></li>
+        <li class="flex gap-3"><span class="feature-check">✓</span><span class="text-white/70 text-sm">Aroma de larga duración: 12 horas</span></li>
+      </ul>
+
+      <div class="stock-urgency-bar" id="stock-badge">
+        <span class="stock-dot"></span><span id="stock-badge-text">STOCK BAJO — SE ESTÁ AGOTANDO</span>
+      </div>
+
+      <!-- Selector de paquete -->
+      <div id="bundle-options" class="bundle-options"></div>
+
+      <button id="add-to-cart-btn" class="add-to-cart-btn">Agregar al Pedido</button>
+
+      <p class="guarantee-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 12.5l2.8 2.8L16.5 9"/></svg>
+        Garantía de devolución de 30 días
+      </p>
+
+      <div class="subscription-box">
+        <p>2 frascos FERA en reposición cada mes a <strong class="text-white">$44.900 c/u</strong></p>
+        <p>Pausa, salta o cancela cuando quieras</p>
+        <p>Envío gratis incluido</p>
+        <button class="subscription-toggle" id="subscription-toggle" type="button">COMPRAR UNA VEZ — SIN DESCUENTO →</button>
+        <p class="subscription-hint">Recomendamos la suscripción para que aproveches el mayor ahorro.</p>
+      </div>
+
+      <!-- Mini FAQ del buybox -->
+      <div class="space-y-2 mt-8">
+        <div class="faq-item faq-item--mini reveal">
+          <button class="faq-question"><span>¿Cómo funciona?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Aplicas 1-2 gotas en puntos de pulso (muñecas, cuello). El calor de tu piel activa el aroma y las feromonas concentradas durante todo el día.</p></div>
+        </div>
+        <div class="faq-item faq-item--mini reveal">
+          <button class="faq-question"><span>¿A qué huele?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Es prácticamente neutro: no reemplaza tu perfume, se combina con él (layering) para amplificar tu presencia sin alterar tu fragancia habitual.</p></div>
+        </div>
+        <div class="faq-item faq-item--mini reveal">
+          <button class="faq-question"><span>¿Cuándo y cómo debo usarlo?</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Ideal antes de salir: cita, reunión, fiesta o cualquier ocasión donde quieras causar una impresión duradera. Aplica sobre piel limpia.</p></div>
+        </div>
+        <div class="faq-item faq-item--mini reveal">
+          <button class="faq-question"><span>Envíos y devoluciones</span><span class="faq-icon">+</span></button>
+          <div class="faq-answer"><p>Entrega en 24-72h hábiles con pago contra entrega. Si no notas diferencia, devolución total dentro de los primeros 30 días.</p></div>
+        </div>
+      </div>
+      <a href="#faq" class="read-more-faqs">Ver más preguntas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRUEBA SOCIAL 1: TITULAR + CAPTURAS AUTO-SCROLL ================= -->
+<section id="resenas" class="relative px-5 py-16 md:py-20">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+    <h2 class="font-display text-2xl md:text-4xl leading-snug reveal">Miles de hombres confían en este aroma para atracción instantánea y una impresión duradera</h2>
+    <div class="fb-marquee reveal">
+      <div class="fb-marquee-fade fb-marquee-fade--left"></div>
+      <div class="fb-marquee-fade fb-marquee-fade--right"></div>
+      <div class="fb-marquee-track" id="fb-review-track"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS EN VIDEO ================= -->
+<section class="relative px-5 py-16 md:py-20">
+  <div class="max-w-6xl mx-auto text-center mb-10 reveal">
+    <h2 class="font-display text-2xl md:text-4xl">Tu aroma natural, amplificado — su deseo, inevitable.</h2>
+    <p class="text-white/50 mt-3">Reacciones reales. Confianza real. Resultados reales.</p>
+  </div>
+  <div class="max-w-6xl mx-auto reveal">
+    <div class="video-carousel">
+      <div class="video-track" id="video-track"></div>
+    </div>
+    <div class="carousel-dots" id="video-dots"></div>
+  </div>
+</section>
+
+<!-- ================= 4 BENEFICIOS (fondo negro) ================= -->
+<section class="relative px-5 py-16 md:py-20 bg-black">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+    <div class="ph ph-square reveal">
+      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2c-1 3-4 5-4 9a4 4 0 008 0c0-4-3-6-4-9z"/></svg>
+      <span class="ph-label">Reemplazar: gif/video de textura</span>
+      <span class="ph-sub">gota de aceite cayendo, loop</span>
+    </div>
+    <div class="reveal" style="transition-delay:.08s">
+      <h2 class="font-display text-2xl md:text-4xl leading-snug mb-8">Voltea miradas y enciende su deseo con solo dos gotas</h2>
+      <div class="space-y-6">
+        <div class="icon-row">
+          <span class="icon-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/></svg></span>
+          <div><h3 class="font-display text-lg mb-1">Aumenta tu Confianza</h3><p class="text-white/50 text-sm">Siéntete más seguro y en control de la situación, sea cual sea.</p></div>
+        </div>
+        <div class="icon-row">
+          <span class="icon-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 6 5 10 5 14a7 7 0 0014 0c0-4-3-8-7-12z"/></svg></span>
+          <div><h3 class="font-display text-lg mb-1">Conquista Más Fácil</h3><p class="text-white/50 text-sm">Comanda la atención sin decir una palabra — ella lo nota antes de que hables.</p></div>
+        </div>
+        <div class="icon-row">
+          <span class="icon-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"/></svg></span>
+          <div><h3 class="font-display text-lg mb-1">Inicia la Conversación</h3><p class="text-white/50 text-sm">Dispara el deseo subconsciente con un aroma que trabaja con tu química natural.</p></div>
+        </div>
+        <div class="icon-row">
+          <span class="icon-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span>
+          <div><h3 class="font-display text-lg mb-1">Domina el Momento</h3><p class="text-white/50 text-sm">Entra a cualquier lugar con propósito, presencia y la energía para respaldarlo.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ESTADÍSTICAS + GRÁFICO (fondo azul marino) ================= -->
+<section class="relative px-5 py-16 md:py-20 bg-fera-navy text-center">
+  <div class="max-w-3xl mx-auto reveal">
+    <h2 class="font-display text-2xl md:text-4xl mb-10">¿Sabías Que?</h2>
+    <div class="grid sm:grid-cols-2 gap-8 mb-14">
+      <div class="stat-item">
+        <span class="stat-number">4/5</span>
+        <p class="text-white/70 text-sm"><em class="text-white not-italic font-semibold">4 de cada 5 hombres</em> dice que la baja confianza le ha impedido acercarse a una mujer.</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="70">0</span><span class="stat-number">%</span>
+        <p class="text-white/70 text-sm"><em class="text-white not-italic font-semibold">Casi el 70%</em> se ha sentido "no suficiente" en situaciones románticas.</p>
+      </div>
+    </div>
+
+    <h2 class="font-display text-2xl md:text-4xl mb-4">Aquí Es Donde Entra FERA</h2>
+    <p class="text-white/70 max-w-xl mx-auto mb-10">Crea un aroma irresistible y personalizado que complementa tu química corporal natural.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-14">
+      <div class="stat-item"><span class="stat-number"><span data-count="91">0</span>%</span><p class="text-white/70 text-xs md:text-sm">Más Confianza</p></div>
+      <div class="stat-item"><span class="stat-number"><span data-count="86">0</span>%</span><p class="text-white/70 text-xs md:text-sm">Más Atención</p></div>
+      <div class="stat-item"><span class="stat-number"><span data-count="89">0</span>%</span><p class="text-white/70 text-xs md:text-sm">Presencia Más Fuerte</p></div>
+    </div>
+
+    <div class="duration-chart duration-chart--navy mb-8">
+      <div class="duration-bar-row">
+        <span class="duration-bar-label">Mañana</span>
+        <div class="duration-bar-track"><div class="duration-bar-fill duration-bar-fill--muted" style="--target-width:30%"><span class="duration-bar-value">30%</span></div></div>
+      </div>
+      <div class="duration-bar-row">
+        <span class="duration-bar-label">Tarde</span>
+        <div class="duration-bar-track"><div class="duration-bar-fill duration-bar-fill--muted" style="--target-width:60%"><span class="duration-bar-value">60%</span></div></div>
+      </div>
+      <div class="duration-bar-row">
+        <span class="duration-bar-label">Noche</span>
+        <div class="duration-bar-track"><div class="duration-bar-fill duration-bar-fill--accent" style="--target-width:95%"><span class="duration-bar-value">95%</span></div></div>
+      </div>
+    </div>
+    <p class="font-display text-lg mb-2">Nivel de Confianza y Atracción</p>
+    <p class="text-white/60 text-sm max-w-xl mx-auto mb-8">Mientras más lo usas, más se amplifica el aroma. De la mañana a la noche, tu confianza, presencia y atracción suben hasta hacerse imposibles de ignorar.</p>
+
+    <a href="#oferta" class="cta-pill">Consíguelo Hoy</a>
+    <p class="guarantee-line guarantee-line--center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 12.5l2.8 2.8L16.5 9"/></svg>
+      Garantía de devolución de 30 días
     </p>
-
-    <!-- Selector HIM / HER — divisor de entrada imponente -->
-    <p class="text-white/40 text-xs tracking-[0.3em] uppercase mb-4">Elige tu camino</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto mb-10">
-      <button data-theme-btn="her" class="gender-select-card gender-select-her" aria-pressed="false">
-        <span class="gender-select-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8 6 5 10 5 14a7 7 0 0014 0c0-4-3-8-7-12z"/></svg>
-        </span>
-        <span class="gender-select-label">FERA FOR HER</span>
-        <span class="gender-select-sub">Atracción pura</span>
-        <span class="gender-select-arrow">Elegir →</span>
-      </button>
-      <button data-theme-btn="him" class="gender-select-card gender-select-him" aria-pressed="true">
-        <span class="gender-select-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"/></svg>
-        </span>
-        <span class="gender-select-label">FERA FOR HIM</span>
-        <span class="gender-select-sub">Instinto. Poder. Dominio.</span>
-        <span class="gender-select-arrow">Elegir →</span>
-      </button>
-    </div>
-
-    <a href="#oferta" class="cta-pulse inline-flex flex-col items-center justify-center accent-bg text-black font-display font-black text-sm md:text-base px-8 md:px-12 py-4 md:py-5 rounded-full shadow-2xl tracking-wide">
-      <span>¡QUIERO MI FRASCO GRATIS!</span>
-      <span class="text-[10px] font-semibold tracking-[0.2em] opacity-70 mt-0.5">PAGO CONTRA ENTREGA</span>
-    </a>
-
-    <div class="mt-8 flex items-center justify-center gap-6 text-white/40 text-xs tracking-wide">
-      <span class="flex items-center gap-1.5">★★★★★ <span class="text-white/60">+4,800 reseñas</span></span>
-      <span class="hidden sm:inline">·</span>
-      <span class="hidden sm:inline">Envío gratis en combos</span>
-    </div>
-  </div>
-
-  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-white/30 z-10">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
   </div>
 </section>
 
-<!-- ================= BENEFICIOS / BIOQUÍMICA ================= -->
-<section id="beneficios" class="relative py-24 md:py-32 px-5 bg-fera-charcoal">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">La ciencia detrás de FERA</span>
-      <h2 class="font-display font-black text-3xl md:text-5xl mt-4 leading-tight">No es magia. Es bioquímica.</h2>
-      <p class="text-white/50 max-w-xl mx-auto mt-4">Tres compuestos activos trabajando en conjunto para generar una respuesta de atracción medible y real.</p>
-    </div>
-
-    <div id="benefits-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-    <p class="text-center text-white/25 text-[11px] mt-8 max-w-lg mx-auto">*Los resultados individuales pueden variar. FERA es una fragancia de uso cosmético; no sustituye tratamiento médico ni psicológico.</p>
-  </div>
-</section>
-
-<!-- ================= PRODUCTO / MOCKUPS ================= -->
-<section id="producto" class="relative py-24 md:py-32 px-5">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">Diseño del producto</span>
-      <h2 class="font-display font-black text-3xl md:text-5xl mt-4">Dos esencias. Un solo objetivo.</h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 items-center">
-      <!-- HIM BOTTLE -->
-      <div class="flex flex-col items-center reveal">
-        <div class="bottle-mockup bottle-him" data-tilt>
-          <div class="bottle-cap"></div>
-          <div class="bottle-neck"></div>
-          <div class="bottle-body">
-            <div class="bottle-shine"></div>
-            <div class="bottle-label">
-              <span class="bottle-brand">FERA</span>
-              <span class="bottle-line"></span>
-              <span class="bottle-sub">FOR HIM</span>
-              <span class="bottle-slogan">INSTINTO. PODER. DOMINIO.</span>
-            </div>
-          </div>
-          <div class="bottle-base"></div>
-        </div>
-        <h3 class="font-display font-bold text-xl mt-8">FERA FOR HIM</h3>
-        <p class="text-white/50 text-sm mt-2 text-center max-w-xs">Negro mate y dorado. Para el hombre que no necesita levantar la voz para ser notado.</p>
+<!-- ================= PRUEBA SOCIAL 2: TESTIMONIOS DE TEXTO (fondo azul marino) ================= -->
+<section class="relative px-5 py-16 md:py-20 bg-fera-navy">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <h2 class="font-display text-2xl md:text-4xl mb-3">No Solo Tomes Nuestra Palabra</h2>
+      <p class="text-white/60 mb-8">Hombres reales. Resultados reales. Esto dicen después de usar FERA.</p>
+      <div class="quote-carousel">
+        <div class="quote-track" id="quote-track"></div>
       </div>
+      <div class="carousel-dots" id="quote-dots"></div>
+    </div>
+    <div class="ph ph-portrait reveal" style="transition-delay:.08s">
+      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+      <span class="ph-label">Reemplazar: gráfico de prueba social</span>
+    </div>
+  </div>
+  <div class="max-w-3xl mx-auto text-center mt-14 reveal">
+    <a href="#oferta" class="cta-pill">Consíguelo Hoy</a>
+    <p class="guarantee-line guarantee-line--center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 12.5l2.8 2.8L16.5 9"/></svg>
+      Garantía de devolución de 30 días
+    </p>
+  </div>
+</section>
 
-      <!-- HER BOTTLE -->
-      <div class="flex flex-col items-center reveal" style="transition-delay:.1s">
-        <div class="bottle-mockup bottle-her" data-tilt>
-          <div class="bottle-cap"></div>
-          <div class="bottle-neck"></div>
-          <div class="bottle-body">
-            <div class="bottle-shine"></div>
-            <div class="bottle-label">
-              <span class="bottle-brand">FERA</span>
-              <span class="bottle-line"></span>
-              <span class="bottle-sub">FOR HER</span>
-              <span class="bottle-slogan">ATRACCIÓN PURA</span>
-            </div>
-          </div>
-          <div class="bottle-base"></div>
-        </div>
-        <h3 class="font-display font-bold text-xl mt-8">FERA FOR HER</h3>
-        <p class="text-white/50 text-sm mt-2 text-center max-w-xs">Negro mate y rojo pasión. Magnetismo puro en 15ml de concentrado.</p>
-      </div>
+<!-- ================= TICKER 2 ================= -->
+<div class="ticker ticker-light">
+  <div class="ticker-track">
+    <span>Hecho Para Cautivar</span><span>·</span><span>Huele a Confianza</span><span>·</span><span>Respaldado por Química Humana</span><span>·</span>
+    <span>Hecho Para Cautivar</span><span>·</span><span>Huele a Confianza</span><span>·</span><span>Respaldado por Química Humana</span><span>·</span>
+    <span>Hecho Para Cautivar</span><span>·</span><span>Huele a Confianza</span><span>·</span><span>Respaldado por Química Humana</span><span>·</span>
+  </div>
+</div>
+
+<!-- ================= INGREDIENTES ================= -->
+<section class="relative px-5 py-16 md:py-20 text-center">
+  <div class="max-w-3xl mx-auto reveal">
+    <h2 class="font-display text-2xl md:text-4xl mb-3">¿Qué Hay Dentro de FERA?</h2>
+    <p class="text-white/50 mb-8">Dos ingredientes poderosos. Un efecto innegable.</p>
+    <div class="ph ph-onlight ph-wide">
+      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+      <span class="ph-label">Reemplazar: infografía de ingredientes</span>
+      <span class="ph-sub">copulinas + feromonas — antes / después de la piel</span>
     </div>
   </div>
 </section>
 
-<!-- ================= OFERTA BOGO ================= -->
-<section id="oferta" class="relative py-24 md:py-32 px-5 bg-fera-charcoal overflow-hidden">
-  <div class="absolute inset-0 hero-glow opacity-40 pointer-events-none"></div>
-
-  <div class="relative max-w-6xl mx-auto">
-    <div class="text-center mb-10 reveal">
-      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">Oferta por tiempo limitado</span>
-      <h2 class="font-display font-black text-3xl md:text-5xl mt-4">Compra uno. Llévate el segundo GRATIS.</h2>
-      <p class="text-white/50 max-w-xl mx-auto mt-4">Pago 100% contra entrega. No arriesgas nada, no pagas nada hasta tenerlo en tus manos.</p>
+<!-- ================= COMPARATIVA (fondo oscuro) ================= -->
+<section id="producto" class="relative px-5 py-16 md:py-20 text-center bg-fera-charcoal">
+  <div class="max-w-3xl mx-auto reveal">
+    <h2 class="font-display text-2xl md:text-4xl mb-8">Por Qué FERA Supera a una Colonia Regular</h2>
+    <div class="ph ph-wide">
+      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg>
+      <span class="ph-label">Reemplazar: tabla comparativa FERA vs. colonia regular</span>
     </div>
-
-    <!-- Countdown -->
-    <div class="reveal flex flex-col items-center mb-14">
-      <span class="text-[11px] tracking-[0.3em] uppercase text-white/40 mb-3">Esta oferta se reinicia en</span>
-      <div id="countdown" class="flex gap-3 md:gap-5">
-        <div class="countdown-box"><span id="cd-hours">00</span><small>Horas</small></div>
-        <div class="countdown-box"><span id="cd-minutes">00</span><small>Min</small></div>
-        <div class="countdown-box"><span id="cd-seconds">00</span><small>Seg</small></div>
-      </div>
-    </div>
-
-    <!-- Package cards (contenido dinámico según género seleccionado) -->
-    <div id="packages-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch"></div>
+    <a href="#oferta" class="cta-pill mt-8">Consíguelo Hoy</a>
+    <p class="guarantee-line guarantee-line--center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M8 12.5l2.8 2.8L16.5 9"/></svg>
+      Garantía de devolución de 30 días
+    </p>
   </div>
 </section>
 
-<!-- ================= TESTIMONIOS / WHATSAPP ================= -->
-<section id="testimonios" class="relative py-24 md:py-32 px-5">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">Historias reales</span>
-      <h2 class="font-display font-black text-3xl md:text-5xl mt-4">Lo que dicen cuando ya no pueden más</h2>
-    </div>
-
-    <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-  </div>
-</section>
-
-<!-- ================= GARANTÍA + FAQ ================= -->
-<section id="garantia" class="relative py-20 px-5 bg-fera-charcoal">
-  <div class="max-w-4xl mx-auto reveal">
-    <div class="guarantee-seal">
-      <div class="guarantee-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l7 3v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V5l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-      </div>
-      <div>
-        <h3 class="font-display font-black text-xl md:text-2xl accent-text mb-1">O te devora a besos, o te devolvemos el dinero</h3>
-        <p class="text-white/50 text-sm md:text-base">Garantía total de 30 días. Si no ves resultados, te devolvemos el 100% de tu dinero. Sin preguntas, sin letra pequeña.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="faq" class="relative py-24 md:py-32 px-5">
+<!-- ================= FAQ (fondo azul marino) ================= -->
+<section id="faq" class="relative px-5 py-16 md:py-20 bg-fera-navy">
   <div class="max-w-3xl mx-auto">
-    <div class="text-center mb-14 reveal">
-      <span class="text-xs tracking-[0.4em] uppercase accent-text font-semibold">Dudas</span>
-      <h2 class="font-display font-black text-3xl md:text-5xl mt-4">Preguntas frecuentes</h2>
-    </div>
-
+    <h2 class="font-display text-2xl md:text-4xl mb-10 reveal">¿Tienes Preguntas? Te Tenemos Cubierto.</h2>
     <div class="space-y-3">
-      <div class="faq-item reveal">
-        <button class="faq-question">
-          <span>¿FERA tiene olor propio o huele a perfume?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>FERA tiene un aroma neutro y sutil de fondo, diseñado para combinarse (layering) con tu perfume habitual sin alterarlo. No reemplaza tu fragancia: potencia su efecto.</p>
-        </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Qué hacen las feromonas?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Actúan como señales químicas que el cerebro interpreta a nivel subconsciente, generando cercanía, curiosidad y una impresión de confianza casi inmediata en quien las percibe.</p></div>
       </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question">
-          <span>¿Cómo funciona el pago contra entrega?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>Llenas el formulario con tus datos de envío, nuestro equipo confirma tu pedido por WhatsApp o llamada, y pagas en efectivo cuando el mensajero te entrega el paquete en tu puerta.</p>
-        </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Cuál es la ciencia detrás de las feromonas humanas?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Se investiga que el órgano vomeronasal, ubicado en la cavidad nasal, podría estar implicado en comportamientos sociosexuales subconscientes relacionados con la selección de pareja. FERA incorpora feromonas sintetizadas que buscan aprovechar esa posible respuesta.</p></div>
       </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question">
-          <span>¿Cuánto dura el efecto de una aplicación?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>Gracias a su base en aceite concentrado, la fijación en piel dura más de 24 horas, muy por encima de un perfume tradicional en base alcohol.</p>
-        </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Cómo se elaboran las feromonas de FERA?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Trabajamos con perfiles sintetizados en laboratorio que buscan imitar de cerca los que produce el cuerpo humano de forma natural, incorporados luego en una base de aceite de alta fijación.</p></div>
       </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question">
-          <span>¿En cuánto tiempo llega mi pedido?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>Entre 24 y 72 horas hábiles según tu ciudad. Los combos de 2 y 4 frascos incluyen envío gratuito y prioridad de despacho.</p>
-        </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Cuánto dura el aroma?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Gracias a su base en aceite concentrado, la fijación en piel dura hasta 12 horas — muy por encima de un perfume tradicional en base alcohol.</p></div>
       </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question">
-          <span>¿Qué pasa si no funciona para mí?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>Tienes 30 días de garantía total desde la entrega. Si no notas diferencia, te devolvemos el 100% de tu dinero.</p>
-        </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Es seguro para uso diario?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Sí. Nuestro cuerpo produce feromonas de forma natural; FERA es simplemente un potenciador tópico, elaborado con ingredientes de alta calidad aptos para uso diario.</p></div>
+      </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Me hará oler demasiado fuerte?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Para nada. FERA está diseñado para ser sutil pero efectivo, potenciando tu presencia natural sin saturar el ambiente.</p></div>
+      </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Cómo lo uso de forma efectiva?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Aplica en puntos de pulso — muñecas, cuello, detrás de las orejas. El calor de estas zonas amplifica el aroma y las feromonas durante todo el día.</p></div>
+      </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Es seguro para piel sensible?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Está formulado para ser seguro en la mayoría de los casos. Aun así, recomendamos una prueba en un área pequeña antes del primer uso completo.</p></div>
+      </div>
+      <div class="faq-item faq-item--navy reveal">
+        <button class="faq-question"><span>¿Qué pasa si no funciona para mí?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Cada química corporal es distinta — por eso ofrecemos 30 días de garantía total. Sin estrés, sin complicaciones.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="relative border-t border-white/5 py-12 px-5 bg-fera-black">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-    <span class="text-xl font-display font-black tracking-[0.3em] accent-text">FERA</span>
+<!-- ================= TITULAR RESEÑAS + WIDGET (placeholder) ================= -->
+<section class="relative px-5 py-16 md:py-20 text-center">
+  <div class="max-w-2xl mx-auto reveal">
+    <h2 class="font-display text-2xl md:text-4xl mb-3">Confianza en un Frasco. Prueba en las Reseñas.</h2>
+    <p class="text-white/50">Miles de hombres ya viven resultados reales, lee sus historias.</p>
+  </div>
+</section>
+
+<section class="relative px-5 pb-16 md:pb-20">
+  <div class="max-w-5xl mx-auto reveal">
+    <div class="review-grid-ph" id="reviews-widget-ph"></div>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER + FOOTER ================= -->
+<footer class="relative border-t border-white/5 bg-fera-charcoal">
+  <div class="max-w-6xl mx-auto px-5 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+    <div>
+      <h3 class="font-display text-xl mb-2">¿Ya estás en la lista?</h3>
+      <p class="text-white/50 text-sm mb-4">Únete a más de 97,000 miembros y recibe novedades y ofertas exclusivas.</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" required placeholder="Correo electrónico" class="newsletter-input" />
+        <button type="submit" class="newsletter-submit" aria-label="Suscribirse">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+    <div>
+      <p class="footer-col-title">Marca</p>
+      <ul class="footer-link-list">
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Contáctanos</a></li>
+        <li><a href="#">Cómo Usarlo</a></li>
+        <li><a href="#producto">Nosotros vs. Ellos</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">¿Necesitas Ayuda?</p>
+      <ul class="footer-link-list">
+        <li><a href="#">Rastrear Pedido</a></li>
+        <li><a href="#">Envíos y Entrega</a></li>
+        <li><a href="#">Política de Devolución</a></li>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Términos de Servicio</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Míranos</p>
+      <p class="text-white/50 text-sm">Etiquétanos en IG @ferascent</p>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-5 py-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+    <span class="text-xl font-display tracking-[0.3em] accent-text">FERA</span>
     <p class="text-white/30 text-xs text-center md:text-right max-w-md">
       FERA es una fragancia cosmética de uso externo. No es un producto medicinal ni garantiza resultados idénticos en todas las personas. Uso exclusivo para mayores de 18 años. © <span id="year"></span> FERA. Todos los derechos reservados.
     </p>
@@ -310,12 +452,12 @@
 
     <div id="order-form-view">
       <span class="text-[11px] tracking-[0.3em] uppercase accent-text font-semibold">Pago contra entrega</span>
-      <h3 id="modal-pkg-title" class="font-display font-black text-2xl mt-2 mb-1">Combo 2 Frascos</h3>
+      <h3 id="modal-pkg-title" class="font-display text-2xl mt-2 mb-1">Combo 2 Frascos</h3>
       <p id="modal-pkg-desc" class="text-white/50 text-sm mb-6">2 Frascos FERA · Envío gratis</p>
 
       <div class="order-total-box">
         <span class="text-white/50 text-sm">Total a pagar al recibir</span>
-        <span id="modal-total" class="text-3xl font-display font-black accent-text">$149.900</span>
+        <span id="modal-total" class="text-3xl font-display accent-text">$149.900</span>
       </div>
 
       <form id="order-form" class="mt-6 space-y-4">
@@ -336,7 +478,7 @@
           <input required type="text" name="direccion" class="order-input" placeholder="Calle, número, barrio" />
         </div>
         <input type="hidden" name="paquete" id="modal-pkg-field" />
-        <button type="submit" class="btn-glow accent-bg text-black font-display font-black text-sm w-full py-4 rounded-full tracking-wide mt-2">
+        <button type="submit" class="btn-glow accent-bg text-black font-body font-black text-sm w-full py-4 rounded-full tracking-wide mt-2">
           CONFIRMAR PEDIDO — PAGO CONTRA ENTREGA
         </button>
         <p class="text-white/30 text-[11px] text-center">No se realiza ningún cobro ahora. Pagas en efectivo cuando recibes tu pedido.</p>
@@ -347,7 +489,7 @@
       <div class="mx-auto mb-4 w-16 h-16 rounded-full accent-bg flex items-center justify-center">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
       </div>
-      <h3 class="font-display font-black text-2xl mb-2">¡Pedido confirmado!</h3>
+      <h3 class="font-display text-2xl mb-2">¡Pedido confirmado!</h3>
       <p class="text-white/50 text-sm max-w-xs mx-auto">Un asesor de FERA te escribirá por WhatsApp en los próximos minutos para confirmar la entrega. Ten tu efectivo listo 😉</p>
       <button data-close-modal class="mt-6 text-sm accent-text font-semibold tracking-wide">Cerrar</button>
     </div>
@@ -357,10 +499,16 @@
 <!-- ================= TOAST DE NOTIFICACIONES SOCIALES ================= -->
 <div id="toast-container" class="toast-container"></div>
 
-<!-- ================= CTA FLOTANTE MÓVIL ================= -->
-<a href="#oferta" class="mobile-floating-cta md:hidden">
-  <span>¡QUIERO MI FRASCO GRATIS!</span>
-</a>
+<!-- ================= BARRA FLOTANTE INTELIGENTE ================= -->
+<div id="floating-bar" class="floating-bar">
+  <div class="floating-bar-inner">
+    <div class="floating-bar-info">
+      <span id="floating-bar-name" class="floating-bar-name">Compra 1, Lleva 2</span>
+      <span id="floating-bar-price" class="floating-bar-price">$149.900</span>
+    </div>
+    <button id="floating-bar-btn" class="floating-bar-btn">Añadir al pedido</button>
+  </div>
+</div>
 
 <script src="app.js"></script>
 </body>
