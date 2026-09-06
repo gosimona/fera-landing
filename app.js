@@ -143,14 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
      GALERÍA — swap de placeholder principal al hacer clic en thumbs
   ------------------------------------------------------- */
   const pdpThumbs = document.getElementById('pdp-thumbs');
-  const pdpMainLabel = document.getElementById('pdp-main-image-label');
-  if (pdpThumbs && pdpMainLabel) {
+  const pdpMainImg = document.getElementById('pdp-main-image-img');
+  if (pdpThumbs && pdpMainImg) {
     pdpThumbs.addEventListener('click', (e) => {
       const thumb = e.target.closest('.pdp-thumb');
       if (!thumb) return;
       pdpThumbs.querySelectorAll('.pdp-thumb').forEach((t) => t.classList.remove('active'));
       thumb.classList.add('active');
-      pdpMainLabel.textContent = `Reemplazar: ${thumb.dataset.label}`;
+      pdpMainImg.src = thumb.dataset.full;
     });
   }
 

@@ -86,20 +86,18 @@
 
     <!-- GALERÍA -->
     <div class="reveal">
-      <div class="pdp-gallery-main ph ph-onlight ph-square" id="pdp-main-image">
-        <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-        <span class="ph-label" id="pdp-main-image-label">Reemplazar: foto de producto</span>
-        <span class="ph-sub">1200×1200 · fondo tela oscura + frasco en mano</span>
+      <div class="pdp-gallery-main media-frame ph-square" id="pdp-main-image">
+        <img id="pdp-main-image-img" src="assets/gallery/01-principal.jpeg" alt="FERA For Him — foto de producto" />
         <span class="pdp-seal">30 DÍAS<br>GARANTÍA 100%</span>
         <span class="pdp-pill">★ Mejor Aroma con Feromonas 2026</span>
       </div>
       <div class="pdp-thumbs" id="pdp-thumbs">
-        <button class="pdp-thumb active" data-label="foto de producto principal" aria-label="Imagen 1"></button>
-        <button class="pdp-thumb" data-label="gráfico USP: Aumenta Confianza / Atrae sin esfuerzo" aria-label="Imagen 2"></button>
-        <button class="pdp-thumb" data-label="frasco sobre tela + sello '2026 Mejor Aroma'" aria-label="Imagen 3"></button>
-        <button class="pdp-thumb" data-label="testimonio destacado en captura" aria-label="Imagen 4"></button>
-        <button class="pdp-thumb" data-label="cómo usarlo: 2 gotas en puntos de pulso" aria-label="Imagen 5"></button>
-        <button class="pdp-thumb" data-label="comparativa FERA vs. perfume tradicional" aria-label="Imagen 6"></button>
+        <button class="pdp-thumb active" data-full="assets/gallery/01-principal.jpeg" aria-label="Imagen 1"><img src="assets/gallery/01-principal.jpeg" alt="" /></button>
+        <button class="pdp-thumb" data-full="assets/gallery/02-usp.jpeg" aria-label="Imagen 2"><img src="assets/gallery/02-usp.jpeg" alt="" /></button>
+        <button class="pdp-thumb" data-full="assets/gallery/03-sello.jpeg" aria-label="Imagen 3"><img src="assets/gallery/03-sello.jpeg" alt="" /></button>
+        <button class="pdp-thumb" data-full="assets/gallery/04-testimonio.jpeg" aria-label="Imagen 4"><img src="assets/gallery/04-testimonio.jpeg" alt="" /></button>
+        <button class="pdp-thumb" data-full="assets/gallery/05-como-usarlo.jpeg" aria-label="Imagen 5"><img src="assets/gallery/05-como-usarlo.jpeg" alt="" /></button>
+        <button class="pdp-thumb" data-full="assets/gallery/06-comparativa.jpeg" aria-label="Imagen 6"><img src="assets/gallery/06-comparativa.jpeg" alt="" /></button>
       </div>
     </div>
 
@@ -199,10 +197,8 @@
 <!-- ================= 4 BENEFICIOS (fondo negro) ================= -->
 <section class="relative px-5 py-16 md:py-20 bg-black">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-    <div class="ph ph-square reveal">
-      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2c-1 3-4 5-4 9a4 4 0 008 0c0-4-3-6-4-9z"/></svg>
-      <span class="ph-label">Reemplazar: gif/video de textura</span>
-      <span class="ph-sub">gota de aceite cayendo, loop</span>
+    <div class="media-frame ph-square reveal">
+      <img src="assets/secciones/textura-producto.gif" alt="Textura del aceite FERA" loading="lazy" />
     </div>
     <div class="reveal" style="transition-delay:.08s">
       <h2 class="font-display text-2xl md:text-4xl leading-snug mb-8">Voltea miradas y enciende su deseo con solo dos gotas</h2>
@@ -288,9 +284,8 @@
       </div>
       <div class="carousel-dots" id="quote-dots"></div>
     </div>
-    <div class="ph ph-portrait reveal" style="transition-delay:.08s">
-      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span class="ph-label">Reemplazar: gráfico de prueba social</span>
+    <div class="media-frame ph-portrait reveal" style="transition-delay:.08s">
+      <img src="assets/secciones/prueba-social.jpeg" alt="FERA — prueba social" loading="lazy" />
     </div>
   </div>
   <div class="max-w-3xl mx-auto text-center mt-14 reveal">
@@ -316,10 +311,8 @@
   <div class="max-w-3xl mx-auto reveal">
     <h2 class="font-display text-2xl md:text-4xl mb-3">¿Qué Hay Dentro de FERA?</h2>
     <p class="text-white/50 mb-8">Dos ingredientes poderosos. Un efecto innegable.</p>
-    <div class="ph ph-onlight ph-wide">
-      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
-      <span class="ph-label">Reemplazar: infografía de ingredientes</span>
-      <span class="ph-sub">copulinas + feromonas — antes / después de la piel</span>
+    <div class="media-frame ph-wide">
+      <img src="assets/secciones/ingredientes.jpeg" alt="Ingredientes FERA — copulinas y feromonas en base de aceite" loading="lazy" />
     </div>
   </div>
 </section>
@@ -328,9 +321,12 @@
 <section id="producto" class="relative px-5 py-16 md:py-20 text-center bg-fera-charcoal">
   <div class="max-w-3xl mx-auto reveal">
     <h2 class="font-display text-2xl md:text-4xl mb-8">Por Qué FERA Supera a una Colonia Regular</h2>
-    <div class="ph ph-wide">
-      <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg>
-      <span class="ph-label">Reemplazar: tabla comparativa FERA vs. colonia regular</span>
+    <div class="compare-table" style="background-image:linear-gradient(rgba(10,10,10,.72),rgba(10,10,10,.82)), url('assets/secciones/comparativa-tabla.jpeg')">
+      <div class="compare-row compare-row--head"><span></span><span class="accent-text">FERA</span><span>Colonia Regular</span></div>
+      <div class="compare-row"><span>Duración del aroma</span><span class="compare-yes">12 horas</span><span class="compare-no">3–4 horas</span></div>
+      <div class="compare-row"><span>Contiene feromonas concentradas</span><span class="compare-yes">✓</span><span class="compare-no">✗</span></div>
+      <div class="compare-row"><span>Base en aceite (mayor fijación)</span><span class="compare-yes">✓</span><span class="compare-no">✗</span></div>
+      <div class="compare-row"><span>Se combina con tu perfume (layering)</span><span class="compare-yes">✓</span><span class="compare-no">✗</span></div>
     </div>
     <a href="#oferta" class="cta-pill mt-8">Consíguelo Hoy</a>
     <p class="guarantee-line guarantee-line--center">

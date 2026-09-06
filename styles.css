@@ -151,6 +151,21 @@ body { background-color: #0A0A0A; }
 .ph-wide { aspect-ratio: 16 / 7; }
 .ph-video { aspect-ratio: 4 / 5; }
 
+/* ---------- Media frame (imagen/video real ya conectado) ---------- */
+.media-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.media-frame img,
+.media-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* ---------- PDP: galería ---------- */
 .pdp-gallery-main { position: relative; }
 .pdp-seal {
@@ -184,13 +199,16 @@ body { background-color: #0A0A0A; }
 .pdp-thumb {
   width: 56px; height: 56px;
   border-radius: 10px;
-  border: 1.5px dashed rgba(255,255,255,0.18);
+  border: 1.5px solid rgba(255,255,255,0.18);
   background: rgba(255,255,255,0.03);
   cursor: pointer;
+  padding: 0;
+  overflow: hidden;
   transition: border-color .2s ease, background .2s ease;
 }
+.pdp-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .pdp-thumb:hover { border-color: rgba(255,255,255,0.35); }
-.pdp-thumb.active { border-style: solid; border-color: var(--accent); background: rgba(var(--accent-rgb), 0.1); }
+.pdp-thumb.active { border-color: var(--accent); box-shadow: 0 0 0 1.5px var(--accent); }
 
 /* ---------- Buybox ---------- */
 .free-ship-tag {
@@ -367,6 +385,41 @@ body { background-color: #0A0A0A; }
 .duration-bar-fill--accent { background: var(--accent); }
 .duration-bar-value { font-family: 'Jost', sans-serif; font-weight: 700; font-size: 11px; color: #0A0A0A; white-space: nowrap; margin-right: 10px; }
 .reveal.revealed .duration-bar-fill { width: var(--target-width); }
+
+/* ---------- Tabla comparativa (FERA vs. colonia regular) ---------- */
+.compare-table {
+  max-width: 560px;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  text-align: left;
+}
+.compare-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.compare-row:first-child { border-top: none; }
+.compare-row > span:nth-child(2),
+.compare-row > span:nth-child(3) { text-align: center; }
+.compare-row--head {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.compare-yes { color: var(--accent); font-weight: 700; }
+.compare-no { color: rgba(255,255,255,0.35); }
 
 /* ---------- FAQ accordion ---------- */
 .faq-item {
